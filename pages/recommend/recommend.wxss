@@ -1,0 +1,29 @@
+.movie{
+  width:100%;
+  position: relative;
+  height:250rpx;
+  border-bottom:3rpx solid #ccc;
+  background-color: #3A3A3A;
+}
+.movie-banner{
+  width:30%;
+  float:left;
+}
+.banner-img{
+  width:70%;
+  height:200rpx;
+  display:block;
+  margin:0 auto;
+  margin-top:10rpx;
+}
+.movie-info{
+  width:70%;
+  float: right;
+  font-size:25rpx;
+  line-height: 40rpx;
+  color:#fff;
+  position:absolute;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+}

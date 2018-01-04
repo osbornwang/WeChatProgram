@@ -1,0 +1,18 @@
+<view class="box floatfix">
+  <view class="search">
+    <input type='text' value="{{inputValue}}" bindinput='bindKeyInput'/>
+      <view class="btn-area">
+        <button bindtap="btnTap">查询</button>
+      </view>
+  </view>
+  <view class="results floatfix">
+    <view class="tips" wx:if="{{tip.length > 0}}">{{tip}}</view>
+    <view class="tips"  wx:else>你要搜索：</view>
+    <view class="search-info floatfix">
+      <navigator class="searchRes"  wx:for="{{searchResult}}" wx:key="{{item.id}}" url="../moviedetail/moviedetail?movie_id={{item.id}}">
+        <image class="searchRes-img" mode="widthFix" src="{{item.images.small}}"></image> 
+        <view class="movie-name">{{item.title}}</view>
+      </navigator>
+    </view>
+  </view> 
+</view>

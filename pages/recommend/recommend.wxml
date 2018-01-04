@@ -1,0 +1,12 @@
+<navigator class="movie"  wx:for="{{movieInfo}}" wx:key="{{item.id}}" url="../moviedetail/moviedetail?movie_id={{item.id}}">
+  <view class="movie-banner">
+      <image class="banner-img" mode="widthFix" src="{{item.images.small}}"></image> 
+  </view>
+  <view class="movie-info">  
+    <view><span class="info-head name">名称：</span>{{item.title}}</view>
+    <view><span class="info-head directors">导演：</span>{{item.directorsStr}}</view>
+    <view><span class="info-head casts">演员：</span>{{item.castsStr}}</view>
+    <view><span class="info-head genres">类型：</span>{{item.genresStr}}</view>
+    <view><span class="info-head year">上映年份：</span>{{item.year}}（中国大陆）</view>
+  </view>
+</navigator>

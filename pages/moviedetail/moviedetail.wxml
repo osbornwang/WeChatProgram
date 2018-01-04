@@ -1,0 +1,18 @@
+<view class="box"> 
+  <image class="detail-img" src="{{movieInfo.images.small}}"  mode="widthFix"></image>
+  <view class="detail-info">
+    <view class="average"><span class="detail-head average">评分：</span>{{movieInfo.rating.average}}</view>
+    <view><span class="detail-head name">名称：</span>{{movieInfo.title}}</view>
+    <view><span class="detail-head directors">导演：</span>{{movieInfo.directorsStr}}</view>
+    <view><span class="detail-head casts">演员：</span>{{movieInfo.castsStr}}</view>
+    <view><span class="detail-head genres">类型：</span>{{movieInfo.genresStr}}</view>
+    <view><span class="detail-head name">上映年份：</span>{{movieInfo.year}}（中国大陆）</view>
+  </view>  
+  <scroll-view scroll-x="true" class="casts-pic">
+     <navigator  class='pic-box' wx:for="{{movieInfo.casts}}" wx:key="{{item.id}}" url="../castsInfo/castsInfo?casts_id={{item.id}}" class='pic-box'><image class="casts-img" src="{{item.avatars.small}}"  mode="widthFix"></image></navigator> 
+    <!-- <view class='pic-box' wx:for="{{movieInfo.casts}}" wx:key="{{item.id}}"><image class="casts-img" src="{{item.avatars.small}}"  mode="widthFix"></image></view> -->
+  </scroll-view>
+  <view class="detail-info summary">{{movieInfo.summary}}</view>
+</view>
+
+
